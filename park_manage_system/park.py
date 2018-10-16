@@ -5,32 +5,19 @@
 import datetime
 
 class Park():
-    #假设停车场一共有100个停车位
-    park_spot = 100
+    #定义停车场属性，依次为停车场名称、开放时间、出口、入口、停车场类型、空闲停车位数量
+    def __init__(self,park_name,park_way_out,park_entrance,park_type,free_parking):
+        self.park_name = park_name
+        self.opening_hours = None
+        self.park_way_out = park_way_out
+        self.park_entrance = park_entrance
+        self.park_type = park_type
+        self.free_parking = free_parking
 
-    #输入车牌号，统计停车位剩余情况
-    @classmethod
-    def user_park(cls):
-        print('类方法')
-        if cls.park_spot < 0:
-           return '无剩余停车位！！！'
-        else:
-            print('输入车牌号：')
-            cls.license_plate_number = input()
-            cls.park_spot -= 1
-            return(cls.park_spot)
-    #停车开始时间
-    def start_time(self):
-        pass
+park1 = Park('美行停车场','出口：东门','入口：西门','地下停车场',100)
 
-    #停车结束时间
-    def end_time(self):
-        pass
 
-    #根据停车时间收取停车费
-    def parking_fee(self):
-        pass
-
+        
         
 
 

@@ -1,15 +1,14 @@
 '''
-执行停车场的相关操作
+车主从进入到离开停车场的过程
 '''
 
-from park import Park
+import park,owners,indent,stall,car,parking_record
 
-excute_park = Park()
-#汽车进入停车场
-Park().user_park()
-#汽车停到停车位上
-excute_park.start_time()
-#汽车离开停车位
-excute_park.end_time
-#计算停车费用，在停车场出口收取停车费用
-excute_park.parking_fee()
+owners.owner1.in_park(park.park1)
+owners.owner1.parking(stall.stall1)
+owners.owner1.leave_stall()
+owners.owner1.leave_park()
+record = parking_record.Record()
+print(record.produce_recard())
+indent.indent1.print_info()
+
